@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.ThirdMain{
+  position: relative;
+  padding: 16rem 0 14rem;
+  background-color: #ffc935;
+  & .container-fluid {
+    & .thirdHead {
+    & .thirdLogo{
+      width: 100px;
+  }
+  & h2{
+    font-weight: 400;
+    font-size: clamp(1.875rem, 1.4423rem + 1.9231vw, 3.75rem);
+    font-family: 'Anton',sans-serif;
+    padding-top: 1rem;
+  }
+  & .WaterM {
+    width: 150px;
+    position: absolute;
+    left: 12%;
+    top: 18rem;
+    transition: all .2s ease;
+  }
+  .Orn{
+    width: 300px;
+    position: absolute;
+    right:0;
+    top: 20rem;
+    z-index: 10;
+    animation: fromtoOrn 30s ease infinite;
+  }
+}
+& .THirdContent {
+  padding-top: 5.5rem;
+}
+& .ThirdFooter {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  & img {
+    object-fit: cover;
+  }
+}
+}
+}
+
+@media (width < 1000px) {
+  .ThirdMain {
+    & .container-fluid {
+      & .thirdHead {
+        & .WaterM {
+          width: 130px;
+          left: 10%;
+        }
+        & .Orn {
+          width: 200px;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 860px) {
+  .ThirdMain {
+    & .container-fluid {
+      & .thirdHead {
+        & .WaterM {
+          width: 110px;
+          left: 2%;
+        }
+
+        & .Orn {
+          width: 150px;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+@media (width < 565px) {
+  .ThirdMain {
+    padding: 11rem 0 4rem;
+    & .container-fluid {
+      & .thirdHead {
+        & .WaterM {
+          width: 65px;
+          left: 2%;
+          top: 5rem ;
+        }
+
+        & .Orn {
+          width: 90px;
+          right: 0;
+          top: 6rem ;
+        }
+      }
+    }
+  }
+}

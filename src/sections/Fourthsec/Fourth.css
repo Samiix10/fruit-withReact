@@ -1,0 +1,283 @@
+.fourth {
+  background-color: #fc6901;
+}
+.Boxitem {
+  position: relative;
+  padding: 3rem;
+  &:hover .bgItem::before {
+    transform: scale(1.1);
+  }
+  &:hover .bgItem::after {
+    transform: scale(0);
+  }
+
+  &:hover .bgItem .bgBox img:first-child {
+    opacity: 0;
+  }
+
+  &:hover .bgItem .bgBox img:nth-child(2) {
+    opacity: 1;
+  }
+  &:hover .bgItem .bgBox .iconsOver {
+    transform: translateX(-50%) rotateX(0deg);
+  }
+  &:hover .bgItem .sale {
+    opacity: 0;
+  }
+  & .bgItem {
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fd8700;
+      z-index: -1;
+      transform: scale(0);
+      transition: all 0.3s ease-in-out;
+      -webkit-mask-image: url(./fourthImg/shop-mask-main.png);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: cover;
+      mask-image: url(./fourthImg/shop-mask-main.png);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffc935;
+      z-index: -1;
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+      -webkit-mask-image: url(./fourthImg/shop-mask-main.png);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: cover;
+      mask-image: url(./fourthImg/shop-mask-main.png);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+    }
+
+    & .bgBox {
+      position: relative;
+      z-index: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      & img:first-child {
+        transition: all 0.3s ease-in-out;
+      }
+      & img:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        object-fit: contain;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
+      & .iconsOver {
+        position: absolute;
+        width: 140px;
+        height: 100px;
+        z-index: 10;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%) rotateX(-90deg);
+        transform-origin: center center;
+        display: flex;
+        justify-content: space-around;
+        transition: all 0.2s ease;
+        & svg {
+          cursor: pointer;
+          transition: all 0.2s ease;
+          & g rect {
+            transition: all 0.2s ease;
+          }
+
+          &:hover g rect {
+            fill: #87a143;
+          }
+          & g path {
+            transition: all 0.2s ease;
+          }
+          &:hover g path {
+            stroke: #ffffff;
+          }
+        }
+        .iconCart {
+          transition: all 0.2s ease;
+        }
+        .iconCart:hover {
+          fill: #fff;
+        }
+        & .heartIcon.liked {
+          fill: #87a143;
+          transition: all 0.2s ease;
+          &:hover {
+            fill: #d3d3d3;
+          }
+        }
+      }
+    }
+    & .sale {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      /* padding: 0 10px; */
+      border-radius: 50%;
+      z-index: 2;
+      background: #0f7946;
+      opacity: 1;
+      color: #fff;
+      font-size: 10px;
+      font-family: "Anton", sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+  }
+  & .Boxtext {
+    padding-top: 1.8rem;
+    & h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      font-family: "Anton", sans-serif;
+      font-weight: 400;
+      margin: 5px 0 0 0;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      &:hover {
+        color: #ffc935;
+      }
+    }
+    & span {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #fff;
+    }
+  }
+}
+.FourthContent {
+  & > ul {
+    width: 100%;
+    margin: 0 auto;
+    border: none !important;
+    justify-content: center !important;
+    & > li {
+      flex-grow: unset !important;
+      flex-basis: unset !important;
+      flex-shrink: 1;
+      padding: 0 1rem;
+      & > button.nav-link {
+        max-width: fit-content;
+        margin: 0 auto;
+        padding: 0.5rem 1.5rem;
+        background-color: transparent !important;
+        color: #fff;
+        transition: all 0.3s ease;
+        border: 1px solid #fff;
+        border-radius: 25px !important;
+      }
+      & > .nav-link.active,
+      button.nav-link:hover {
+        background-color: #ffc935 !important;
+        color: #1e3234 !important;
+        border: 1px solid #ffc935 !important;
+      }
+    }
+  }
+}
+
+@media (width < 959px) {
+  .FourthContent {
+    & > ul {
+      width: 100%;
+      margin: 0 auto;
+      border: none !important;
+      justify-content: center !important;
+      & > li {
+        padding: 10px;
+        & > button.nav-link {
+          max-width: fit-content;
+          margin: 0 auto;
+          padding: 0.5rem 1.5rem;
+          background-color: transparent !important;
+          color: #fff;
+          transition: all 0.3s ease;
+          border: 1px solid #fff;
+          border-radius: 25px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (width <550px) {
+  .FourthContent {
+    & > ul {
+      width: 70%;
+      margin: 0 auto;
+      flex-direction: column;
+      border: none !important;
+      justify-content: center !important;
+      & > li {
+        padding: 10px;
+        & > button.nav-link {
+          max-width: 100%;
+          margin: 0 auto;
+          padding: 0.5rem 1.5rem;
+          background-color: transparent !important;
+          color: #fff;
+          transition: all 0.3s ease;
+          border: 1px solid #fff;
+          border-radius: 25px !important;
+        }
+      }
+    }
+  }
+}
+
+.FourthHead {
+  & > h2 {
+    text-align: center;
+    font-size: clamp(1.875rem, 1.4423rem + 1.9231vw, 3.75rem);
+    color: #fff;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+  }
+}
+
+.fourthFooter {
+  & > .ShopAll {
+    color: #1e3234;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    background-color: #ffc935;
+    padding: .8rem 1.7rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .5s ease;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.NIcons{
+  width: 85px;
+  & .HeartSvg{
+    position: relative;
+    &::before{
+    content:"0";
+    width: 15px;
+    height: 15px;
+    background-color: #ff679a;
+    color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: -3px;
+    right: -3px;
+    text-align: center;
+    line-height: 1.426;
+    font-size: .7rem;
+  }
+      &:hover>svg path {
+        fill: #ff679a;
+      }
+}
+  & svg , svg  g path , .HeartSvg svg {
+    transition: all .1s ease;
+    cursor: pointer;
+    &:hover , &:hover g path {
+      stroke: #ff679a; 
+    }
+  }
+}
+
+

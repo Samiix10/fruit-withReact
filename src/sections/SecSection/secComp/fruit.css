@@ -1,0 +1,110 @@
+.item-1 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 60px;
+  height: 60px;
+  animation: zominout 2.5s .5s ease infinite , .5s ease 1 bounceInDown;
+  & > img {
+    transform: scaleX(-1);
+  }
+}
+.item-2 {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  width: 155px;
+  height: 243px;
+  animation: bounceInLeft 1s ease 1 ;
+}
+.item-3 {
+  position: absolute;
+  bottom: -10%;
+  left: 5%;
+  width: 300px;
+  height: 254px;
+  z-index: 5;
+}
+.item-4 {
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  width: 110px;
+  height: 68px;
+  animation: fromTo 8s .5s ease infinite , .5s ease 1 bounceInDown;
+  & img{
+    transform: scaleX(-1);
+  }
+}
+.item-5 {
+  position: absolute;
+  bottom: -2%;
+  left: 25%;
+  width: 110px;
+  height: 68px;
+  z-index: 2;
+  animation: tofrom 20s .5s ease infinite , .5s ease 1 bounceInDown;
+}
+.item-6 {
+  position: absolute;
+  top: 20%;
+  right: 25%;
+  width: 150px;
+  height: 100px;
+  animation: rotat 6s .5s ease infinite , .5s ease 1 bounceInDown;
+  transform-origin: top center;
+}
+.item-7 {
+  position: absolute;
+  top: 30%;
+  right: 2%;
+  width: 180px;
+  height: 194px;
+  animation: rotat 30s ease infinite , .5s ease 1 bounceInDown;
+  transform-origin: bottom center;
+}
+.item-8 {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 120px;
+  height: 131px;
+  animation: fromtoy 5s .5s linear infinite , .5s ease 1 bounceInDown;
+}
+.item-9 {
+  position: absolute;
+  bottom: -15%;
+  right: 9%;
+  width: 400px;
+  height: 330px;
+  z-index: 2;
+}
+.item-10 {
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  width: 350px;
+  height: 440px;
+  animation: fromtoy 15s .5s linear infinite , 1s ease 1 bounceInDown;
+  z-index: 2;
+}
+
+@media (width < 1640px) {
+  .item-2 {
+    top: 40%;
+    left: 2%;
+    width: 150px;
+    height: 220px;
+  }
+  .item-9 {
+    right: 6%;
+    width: 400px;
+    height: 330px;
+    z-index: 2;
+  }
+  .item-10 {
+    top: 28%;
+    left: 12%;
+    width: 300px;
+  }
+}

@@ -1,0 +1,56 @@
+.Offcanvas-btn{
+  outline: none;
+  border: none;
+  padding: .5rem;
+  border-radius: 10px;
+  background-color: transparent;
+  & > i{
+    color: #ffc935;
+  }
+}
+
+.offcanvas{
+  max-width:250px;
+  background-color: #fff0ca;
+  & .offcanvas-title {
+    text-transform: capitalize;
+  }
+  & .offcanvas-body{
+    & > .navbar-nav .nav-item {
+      & > .dropdown-menu[data-bs-popper],
+        .dropdown-menu {
+          animation: none;
+        }
+    }
+    & > .navbar-nav .nav-item .nav-link {
+      color: black;
+      border-radius: 15px;
+    }
+    & > .navbar-nav .nav-item .nav-link:hover,
+          .navbar-nav .nav-item .nav-link.show{
+      color: #fff !important;
+      background-color: #ff679a ;
+      border-radius: 15px;
+    }
+    & > .btn-nav{
+      color: #fff;
+        text-transform: capitalize;
+        background-color: #ffc935;
+        padding: .5rem 2rem;
+        border-radius: 1.5rem;
+        border: none;
+        &:active {
+            box-shadow: inset 36px 36px 72px #c49b29,
+              inset -36px -36px 72px #fff741;
+          }
+    }
+  }
+}
+
+@media (width > 430px) {
+  .offcanvas {
+      & .offcanvas-body {
+        &>.btn-nav {
+          display: none;
+        }}}
+}

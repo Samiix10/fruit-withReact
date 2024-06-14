@@ -1,0 +1,160 @@
+footer{
+  background-color:#ff679a ;
+  color: #fff;
+  padding: 3rem 0;
+  & .container-xxl {
+    & .footer-content{
+      & .row {
+        & .FooterBox1 {
+          & .FooterLogo {
+            width: 100px;
+            height: 100px;
+            
+          }
+          & .footerP  {
+            & p {
+              font-family: "Poppins", sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 1.9;
+              margin-bottom: 0;
+              padding: .5rem 0 0 0;
+            } 
+          }
+        }
+      }
+    }
+  }
+    &  .footerBoxContent {
+      & h5 {
+        font-size: clamp(1.25rem, 1.1346rem + 0.5128vw, 1.75rem);
+        font-weight: 400;
+        font-family: "Anton" ,sans-serif;
+        margin: 0 0 clamp(1rem, 0.9423rem + 0.2564vw, 1.25rem);
+      }
+    }
+  & .footerBox2 .footerBoxContent ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.9;
+  }
+  & .footerBox3 ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    > li {
+      cursor: pointer;
+      transition: all .3s ease ;
+      &:hover {
+        color: #ffc935;
+      }
+    }
+  }
+}
+
+@media (991px < width <1200px) {
+  #borTop {
+    border-top: 2px dashed #fff;
+    padding-top: 3.125rem;
+  }
+  #borLeft{
+    border-left: 2px dashed #fff;
+  }
+}
+
+.endFooter{
+padding: .2rem 0;
+background-color: #ffc935;
+& > span {
+  color: #3d3d3d;
+  font-size: 1.5rem;
+  font-family: "Anton" ,sans-serif;
+  letter-spacing: 2px;
+}
+}
+
+.footerIcons {
+  color: #3d3d3d;
+  position: relative;
+  & > .wrapper a {
+    text-decoration: none !important;
+    color: #3d3d3d !important;
+  }
+  &  .wrapper {
+      display: inline-flex;
+      list-style: none;
+      width: 100%;
+      padding-top: 40px;
+      font-family: "Poppins", sans-serif;
+      justify-content: start;
+    }
+    & .wrapper .icon {
+      position: relative;
+      background: #fff;
+      border-radius: 50%;
+      margin: 5px;
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    & .wrapper .tooltip {
+      position: absolute;
+      top: 0;
+      font-size: 14px;
+      background: #fff;
+      color: #fff;
+      padding: 5px 8px;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    & .wrapper .tooltip::before {
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      background: #fff;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%) rotate(45deg);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    & .wrapper .icon:hover .tooltip {
+      top: -45px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    & .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+    & .wrapper .facebook:hover,
+    .wrapper .facebook:hover .tooltip,
+    .wrapper .facebook:hover .tooltip::before {
+      background: #1877f2;
+      color: #fff;
+    }
+    & .wrapper .twitter:hover,
+    .wrapper .twitter:hover .tooltip,
+    .wrapper .twitter:hover .tooltip::before {
+      background: #1da1f2;
+      color: #fff;
+    }
+    & .wrapper .instagram:hover,
+    .wrapper .instagram:hover .tooltip,
+    .wrapper .instagram:hover .tooltip::before {
+      background: #e4405f;
+      color: #fff;
+    }
+
+}

@@ -1,0 +1,86 @@
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap');
+
+  .Second-Content{
+    position: absolute;
+    padding: 13rem 0 0;
+    & .secondhed {
+        & .boxHead {
+            & h1 {
+              font-family: "Fraunces", serif;
+              font-variation-settings:
+                  "SOFT" 90,
+                  "WONK" 0;
+              font-size: clamp(2rem ,10vw, 10rem);
+              letter-spacing: 9px;
+              font-weight: 800;
+              position: relative;
+                z-index: 2;
+                color: #3596c9;
+                text-shadow: 7px 0px 0px rgba(255, 255, 255, 1);
+                font-style: italic;
+                margin: 0;
+                cursor:default;
+                user-select: none;
+            }
+            & .Hfirst {
+              z-index: 1;
+              color:#ffc107 ;
+            }
+            & .seco {
+              margin-top: -2.5rem;
+            }
+        }}
+    & span{
+    max-width:750px;
+    color: #fff;
+    position: relative;
+      z-index: 2;
+      text-wrap: wrap;
+      animation: fadeIn 2.5s ease 1;
+  }
+  & .SecondBox{
+    & ul{
+      position: relative;
+      z-index: 2;
+      list-style-image: url(../secImgs/icons8-grape-15\ \(1\).png);
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+      animation: fadeIn 2.5s ease 1;
+      & li {
+        color: #fff;
+        margin-top: 8px;
+      }
+    }
+  }
+  & .shopBtn{
+    position: relative;
+    z-index: 2;
+  }
+  & .Btnshop {
+    border: none;
+    text-transform: capitalize;
+    padding: .5rem 1.5rem;
+    border-radius: 25px;
+    color: #3d3d3d;
+    background-color: #ffc107;
+    font-weight: 500;
+    transition: all .5s ease;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+@media (width < 1040px) {
+  .Second-Content {
+    padding: 5rem 0 0;
+      & .secondhed {
+        & .boxHead {
+          & h1 {
+            text-shadow: 5px 0px 0px rgba(255, 255, 255, 1);
+          }
+          & .seco {
+            margin-top: 0;
+          }}}}
+}

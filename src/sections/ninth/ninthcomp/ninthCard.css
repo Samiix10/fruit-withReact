@@ -1,0 +1,47 @@
+.ninthSwapCard {
+  max-width: 350px;
+  max-height: 350px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #fff;
+  transform: rotate(15deg);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  &:hover > .ninthSwapCardContent > .ninthSwapCardOverlay {
+      transform: scale(1);
+        border-radius: 0;
+        opacity: 1;
+  }
+    &:hover>.ninthSwapCardContent > img {
+    transform: scale(1.1);
+    }
+  & .ninthSwapCardContent {
+      & > img {
+        transition: all .5s linear;
+      }
+    & .ninthSwapCardOverlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: inline-flex;
+      place-items: center;
+      justify-content: center;
+      background-color: rgb(135, 161, 67,.5);
+      transform: scale(.5);
+      border-radius: 25px;
+      opacity: 0;
+      transition: all .5s ease;
+
+    }
+  }
+}
+
+@media (width < 600px) {
+  .ninthSwapCard {
+      transform: rotate(0) !important;
+      margin: 0 auto;
+    }
+}

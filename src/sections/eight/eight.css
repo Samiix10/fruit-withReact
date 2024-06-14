@@ -1,0 +1,299 @@
+.eight {
+  background-color: #fc6901;
+  padding: 9.375rem 0 12.75rem;
+  color: #fff;
+  position: relative;
+}
+
+.eight {
+  & .STrawOverLab{
+    position: absolute;
+    width: 250px;
+    top: -30%;
+    left: 10%;
+    transition: all .3s ease;
+  }
+}
+.eight {
+  & .LemonOverLab{
+    position: absolute;
+    width: 200px;
+    top: -20%;
+    right: 10%;
+    transition: all .3s ease;
+    animation: rootat 20s linear infinite;
+  }
+}
+@media (width < 992px) {
+  .eight {
+      & .STrawOverLab {
+        position: absolute;
+        width: 200px;
+        top: -15%;
+        left: 5%;
+      }
+    }
+        .eight {
+          & .LemonOverLab {
+            position: absolute;
+            width: 150px;
+            top: -10%;
+            right: 5%;
+            transition: all .3s ease;
+            animation: rootat 20s linear infinite;
+          }
+        }
+}
+@media (width < 555px) {
+  .eight {
+      & .STrawOverLab {
+        position: absolute;
+        width: 100px;
+        top: -10%;
+        left: 5%;
+      }
+    }
+        .eight {
+          & .LemonOverLab {
+            position: absolute;
+            width: 100px;
+            top: -10%;
+            right: 1%;
+            transition: all .3s ease;
+            animation: rootat 20s linear infinite;
+          }
+        }
+}
+
+
+.SwipCard {
+  cursor: pointer;
+  padding: 0 6.25rem;
+  & .SwipCardBody {
+    & .SwipCardImg {
+      padding: 2.5rem;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        background-color: #ffc935;
+        -webkit-mask-image: url(./eightImg/msk-imgs.png);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: cover;
+        mask-image: url(./eightImg/msk-imgs.png);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        z-index: 0;
+      }
+      & .photo {
+        position: relative;
+        z-index: 1;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+    & .SwipCardContent {
+      & p {
+        margin-bottom: 23px;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        line-height: 1.7;
+        padding-right: 4.5rem;
+      }
+      & span {
+        font-size: clamp(1.25rem, 1.1346rem + 0.5128vw, 1.75rem);
+        text-transform: capitalize;
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        & > small {
+          font-size: 0.9rem;
+          letter-spacing: 0.05rem;
+          font-family: "Poppins", sans-serif;
+          position: relative;
+          top: -6px;
+          &::before {
+            content: "-";
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width < 992px) {
+  .SwipCard {
+    & .SwipCardImg {
+      padding: 1rem !important;
+    }
+    & .SwipCardBody {
+      & .SwipCardContent {
+        & p {
+          padding-right: 0rem;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 768px) {
+  .SwipCard {
+    padding: 0;
+  }
+}
+
+@media (width < 1357px) {
+  .SwipCard {
+      & .SwipCardBody {
+        & .SwipCardImg {
+          padding: 1.5rem;
+        }
+      }
+    }
+}
+
+/* ------swiper-------- */
+.eightContent > .eightSwip > .swiper {
+  width: 100%;
+    padding:0 0 2rem 0;
+  & .swiper-pagination {
+    text-align: start;
+    padding-left: 5.5rem;
+    bottom: -5px;
+  }
+  & .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+  & .swiper-pagination-bullet-active,
+  .swiper-pagination-bullet:hover {
+    background-color: #ffc935;
+    padding: 0 1.5rem;
+    border-radius: 15px;
+  }
+  & .swiper-pagination-bullet:hover ~ .swiper-pagination-bullet-active {
+      padding: 0;
+      background-color: #fff;
+    }
+  /* & .swiper-pagination-bullet-active:has(~ :hover){
+      padding: 0;
+      background-color: #fff;
+      
+  } */
+  & .swiper-slide-visible {
+    .SwipCard {
+      & .SwipCardBody {
+        & .SwipCardImg {
+          &::before {
+            animation: Rou 0.2s linear 1;
+          }
+        }
+                & .SwipCardContent {
+                  animation: fadeInUp .5s ease 1;
+                }
+      }
+    }
+  }
+}
+
+.eightContent>.eightSwip {
+  position: relative;
+  & .EathOverLay {
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    right: 16%;
+    width: clamp(100px, 10%, 200px);
+    
+  }
+}
+
+@media (width < 1109px) {
+  .eightContent>.eightSwip {
+      & .EathOverLay {
+        bottom: 15%;
+        right: 18%;
+      }
+    }
+}
+
+@media (width < 992px) {
+  .eightContent>.eightSwip>.swiper {
+      & .swiper-pagination {
+        text-align: center;
+        padding: 0;
+      }}
+}
+
+.eightContent{
+  position: relative;
+  & .TestOverLap{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 85px;
+    top: -11%;
+    width: 65%;
+    height: 20%;
+    z-index: 1;
+    & h2{
+      font-size: clamp(1.875rem, 1.4423rem + 1.9231vw, 3.75rem);
+      font-family: 'Anton', sans-serif;
+      font-weight: 400;
+      color: #fff;
+      text-transform: capitalize;
+    }
+    & > span {
+      font-size: clamp(3.75rem, 2.5rem + 2.6042vw, 5.625rem);
+      color: #fff;
+      display: inline-flex;
+      place-content: center;
+      place-items: center;
+      > svg {
+        /* --- */
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+@media (width < 1255px) {
+.eightContent {
+    & .TestOverLap {
+      top: -25%;
+      width: 70%;
+    }
+    }
+}
+
+@media (width < 992px) {
+  .eightContent {
+    & .TestOverLap {
+      top: -25%;
+      width: 100%;
+      left: 0px;
+    }
+  }
+}
+
+@media (width < 768px) {
+  .eightContent {
+    & .TestOverLap {
+      top: -20%;
+     
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.tenth {
+  padding: 5rem 0 2rem;
+  background-color: #ff679a;
+  & .container-fluid {
+    & .tenthContent {
+      & .row {
+        & .tenthContentBox-head {
+          & > h2 {
+            font-size: clamp(1.875rem, 1.4423rem + 1.9231vw, 3.75rem);
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.5;
+            text-transform: capitalize;
+            padding: 0 0 2rem 0;
+            margin: 0;
+          }
+          & > p {
+            font-size: 1rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            padding: 0 0 2.8rem 0;
+            color: #fff;
+            margin: 0;
+          }
+        }
+        & .tenthContentBox-btn {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          align-items: center;
+          position: relative;
+          & .more{
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #ffc935;
+              padding: 0.7rem 2.9rem;
+              border-radius: 999px;
+              text-align: center;
+              color:#1e3234;
+              text-transform: capitalize;
+              transition: all 0.2s ease;
+              cursor: pointer;
+              font-family: "Poppins",sans-serif;
+              &:hover{
+                background-color:#87a143;
+                color: #fff;
+              }
+          }
+          & .playstore-button {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000;
+            border-radius: 9999px;
+            background-color: rgba(0, 0, 0, 1);
+            padding: 0.2rem 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+            outline: 0;
+            transition: all 0.2s ease;
+            text-decoration: none;
+          }
+
+          & .playstore-button:hover {
+            background-color: transparent;
+            color: rgba(0, 0, 0, 1);
+          }
+
+          & .icon {
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+
+          & .texts {
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+          }
+
+          & .text-1 {
+            margin-bottom: 0.25rem;
+            font-size: 0.75rem;
+            line-height: 1rem;
+          }
+
+          & .text-2 {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+.none-photo{
+  width: 200px;
+  animation: fromytoz 15s ease infinite;
+  
+}
+
+@media (width < 559px) {
+  #BTNS {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+#more{
+  position: absolute;
+  right: -8%;
+  bottom: 190%;
+}
+}

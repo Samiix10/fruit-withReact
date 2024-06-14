@@ -1,0 +1,46 @@
+.sec-two{
+  width:100%;
+  height: 105vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #FF679A;
+  & .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mask-image: url(./secImgs/right-corn-mask.png);
+    mask-repeat: no-repeat;
+    mask-position: top right;
+    mask-size: 40%  88%;
+    background-color: #00D6E4 ;
+    -webkit-mask-image: url(./secImgs/right-corn-mask.png);
+    -webkit-mask-position: top right;
+    -webkit-mask-size: 40% 88%;
+    -webkit-mask-repeat: no-repeat;
+  }
+  & .SvgWave {
+    position: absolute;
+    left: 0;
+    top:99%;
+    width: 100%;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    & img {
+      object-fit: cover;
+    }
+  }
+}
+
+
+@media (width < 775px) {
+  .sec-two {
+      & .overlay {
+        mask-size: 60% 100%;
+        -webkit-mask-size: 60% 50%;
+      }
+    }
+}
+
