@@ -3,9 +3,6 @@
   padding: 9.375rem 0 12.75rem;
   color: #fff;
   position: relative;
-}
-
-.eight {
   & .STrawOverLab{
     position: absolute;
     width: 250px;
@@ -13,8 +10,6 @@
     left: 10%;
     transition: all .3s ease;
   }
-}
-.eight {
   & .LemonOverLab{
     position: absolute;
     width: 200px;
@@ -24,6 +19,7 @@
     animation: rootat 20s linear infinite;
   }
 }
+
 @media (width < 992px) {
   .eight {
       & .STrawOverLab {
